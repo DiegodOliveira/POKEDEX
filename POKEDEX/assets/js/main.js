@@ -43,6 +43,10 @@ loadMoreContent.addEventListener('click', () => {
     }
 })
     
-document.getElementById('pokemonList').addEventListener('click', function(){
-    window.location.href = 'information-pokemon.html'
+document.getElementById('pokemonList').addEventListener('click', function(event){
+   const pokemonItem = event.target.closest('.pokemon');
+   if (pokemonItem){
+    const pokemonId = pokemonItem.getAttribute('pokemon-id');
+    window.location.href = `information-pokemon.html?pokemonId=${pokemonId}`
+   }
 })
