@@ -43,3 +43,6 @@ loadMoreContent.addEventListener('click', () => {
     }
 })
     
+document.getElementById('pokemonList').addEventListener('click', function(){
+    window.location.href = 'information-pokemon.html'
+})
